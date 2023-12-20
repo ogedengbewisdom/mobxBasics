@@ -13,7 +13,7 @@ class Todos {
     }
 
     remove(id) {
-        this.todo.filter(item => item.id !== id)
+        this.todo = this.todo.filter(item => item.id !== id);
     }
 }
 
