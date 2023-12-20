@@ -15,7 +15,7 @@ const App = observer(() => {
   return (
     <>
       <Header />
-      {/* {!storeObj.isAuth && <Auth />} */}
+      {!storeObj.isAuth && <Auth />}
       {storeObj.isAuth && <UserProfile />}
       <TodoItem />
       <NewTodos />
