@@ -2,17 +2,18 @@
 
 import { observer } from 'mobx-react'
 import React from 'react'
-// import todoStore from '../store/todo'
+import todoStore from '../store/todo'
 
-const TodoList = observer(({todoText}) => {
+const TodoList = observer(({todoText, id}) => {
 
-    // const storeObj = todoStore
+    const storeObj = todoStore
 
-    // const deleteHanler = () => {
-    //     storeObj.remove()
-    // };
+    const deleteHanler = () => {
+      console.log("Deleting item with ID:", id);
+        storeObj.remove(id)
+    };
   return (
-    <li style={{color: "wheat", fontSize: "3rem"}}>{todoText}</li>
+    <li style={{color: "wheat", fontSize: "3rem"}}>{todoText} <button onClick={deleteHanler}>DELETE</button></li>
   )
 })
 
