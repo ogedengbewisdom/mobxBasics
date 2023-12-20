@@ -10,7 +10,7 @@ const TodoItem = observer(() => {
     const items = todoObj.todo
   return (
     <ul>
-        {items.map(item => <TodoList key={item.id} todoText={item.text} />)}
+        {items.map(item => <TodoList key={item.id} todoText={item.text} id={item.id} />)}
        
     </ul>
   )
