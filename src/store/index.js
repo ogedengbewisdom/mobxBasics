@@ -10,11 +10,11 @@ class Counterstore {
     }
 
     increase() {
-        this.count++
+        return this.count++
     }
 
     decrease() {
-        this.count--
+       return this.count--
     }
 
     increment(numss) {
